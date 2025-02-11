@@ -1,0 +1,36 @@
+{
+  "name": "cypher-gun-adaptor",
+  "version": "0.0.1",
+  "description": "Syntactic Engine for Interpreting and Fathoming Expression Rules (parses a cypher query into an AST)",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint . --ext .ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lordcraymen/cypher-gun-adaptor.git"
+  },
+  "keywords": [
+    "cypher",
+    "Gun.js",
+    "AST",
+    "Typescript"
+  ],
+  "author": "Florian \"lordcraymen\" Patzke",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lordcraymen/cypher-gun-adaptor/issues"
+  },
+  "homepage": "https://github.com/lordcraymen/cypher-gun-adaptor#readme",
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "eslint": "^9.20.0",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.5"
+  }
+}
