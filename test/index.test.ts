@@ -5,8 +5,8 @@ import Gun from 'gun';
 const gun = Gun();
 
 describe('withCypherSupport', () => {
-  it('it should return an object with am execute method', () => {
+  it('it should return an object with am execute method', async () => {
     const gunWithCypher = withCypherSupport(gun);
-    expect(gunWithCypher.execute("CREATE (a:Person) RETURN a")).toEqual({});
+    expect(await gunWithCypher.execute("RETURN")).toStrictEqual({});
   });
 });
