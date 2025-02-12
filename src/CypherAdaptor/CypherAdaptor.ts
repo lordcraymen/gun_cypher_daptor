@@ -1,15 +1,5 @@
 import { CypherQuery } from "../types";
-
-// Define the clause handler type so that the db parameter is read‑only.
-type clauseHandler = ({
-  parameters,
-  db,
-  context,
-}: {
-  parameters: any;
-  db: Readonly<any>;
-  context: any;
-}) => void;
+import { clauseHandler } from "../types";
 
 function CypherAdaptor<SupportedClauses>(db: any) {
   // Freeze the db instance once so it cannot be overwritten.
