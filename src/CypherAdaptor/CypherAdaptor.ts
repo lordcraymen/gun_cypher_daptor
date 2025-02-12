@@ -1,4 +1,4 @@
-import { CypherQuery } from "../types";
+import { Query } from "../types";
 import { clauseHandler } from "../types";
 
 function CypherAdaptor<SupportedClauses>(db: any) {
@@ -8,7 +8,7 @@ function CypherAdaptor<SupportedClauses>(db: any) {
   const events: Record<keyof SupportedClauses, clauseHandler> =
     {} as Record<keyof SupportedClauses, clauseHandler>;
 
-  const execute = (ast: CypherQuery) => {
+  const execute = (ast: Query) => {
     return new Promise((resolve, reject) => {
       // Use a fresh context per query execution.
       const context = {};

@@ -1,5 +1,6 @@
 import { vi } from "vitest";
 import { CypherAdaptor } from "../src/CypherAdaptor";
+import { Query } from "../src/types";
 
 // Define a minimal SupportedClauses type for our tests.
 type SupportedClauses = {
@@ -31,7 +32,7 @@ describe("SeiferAdaptor", () => {
       .build();
 
     // Create a mock AST with two clauses.
-    const ast = {
+    const ast:Query = {
       type: "Query",
       clauses: [
         { type: "CreateClause", content: { collection:"Collection", variable: "a", id: "value1" } },
@@ -59,7 +60,7 @@ describe("SeiferAdaptor", () => {
       .build();
 
     // Create an AST with an unsupported clause type.
-    const ast = {
+    const ast: Query = {
       type: "Query",
       clauses: [{ type: "UnsupportedClause", content: {} }],
     };
@@ -91,7 +92,7 @@ describe("SeiferAdaptor", () => {
       .build();
 
     // Create an AST with a CreateClause.
-    const ast = {
+    const ast: Query = {
       type: "Query",
       clauses: [{ type: "CreateClause", content: { test: "dummy" } }],
     };
